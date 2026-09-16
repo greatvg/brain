@@ -83,6 +83,8 @@ $RECYCLE.BIN/
 !/.workbuddy/认知盲区证据台账.md
 !/.workbuddy/check_rules.py
 !/.workbuddy/tools/
+# 豁免：扫描工具文件名含 secret 字样，被上方 *secret* 通配误伤（2026-09-16 实测）
+!/.workbuddy/tools/scan_secrets.py
 !/.workbuddy/skills/
 
 # 技能库里可能夹带嵌套仓库与依赖，不入库
