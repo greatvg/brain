@@ -66,10 +66,39 @@ desktop.ini
 .trash/
 $RECYCLE.BIN/
 
+# --- 备份产物（含旧版规则副本，不进仓库）---
+*.bak
+*.orig
+
+# --- 程序家居目录：本次迁移后 .workbuddy 会落在本仓库内 ---
+#     只放行"规则文件"，其余（运行时/密钥/日志）全部忽略
+/.workbuddy/*
+!/.workbuddy/SOUL.md
+!/.workbuddy/IDENTITY.md
+!/.workbuddy/USER.md
+!/.workbuddy/MEMORY.md
+!/.workbuddy/AGENTS.md
+!/.workbuddy/沉淀架构设计.md
+!/.workbuddy/认知盲区双轨框架.md
+!/.workbuddy/认知盲区证据台账.md
+!/.workbuddy/check_rules.py
+!/.workbuddy/tools/
+!/.workbuddy/skills/
+
+# 技能库里可能夹带嵌套仓库与依赖，不入库
+!/.workbuddy/skills/**/.git/
+/.workbuddy/skills/**/node_modules/
+/.workbuddy/skills/**/__pycache__/
+
 # --- 临时 / 一次性 ---
 _scan_*.py
 _probe*.py
 _recon*.py
+_diag_*.py
+_migrate_*.py
+_mk_*.py
+_git_init.py
+_secrets_*.py
 _audit_*.json
 *.tmp
 ~$*
