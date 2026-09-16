@@ -1,0 +1,75 @@
+# ============================================================
+#  E:\brain 真源仓库 .gitignore
+#  铁律：密钥与运行时数据永不入库（2026-09-16 荣总确认）
+# ============================================================
+
+# --- 密钥与凭证：绝对禁止入库 ---
+settings.json
+models.json
+*.env
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+.git-credentials
+*secret*
+*token*
+*credential*
+
+# --- 运行时 / 可再生数据 ---
+logs/
+traces/
+cache/
+binaries/
+projects/
+sessions/
+shell-snapshots/
+file-history/
+changes-detail/
+changes-index/
+blobs/
+audit-log/
+artifact-index/
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+node_modules/
+*.log
+
+# --- 大文件素材（走网盘或 LFS，不进普通 Git）---
+30-素材/**/*.mp4
+30-素材/**/*.mov
+30-素材/**/*.avi
+30-素材/**/*.mkv
+30-素材/**/*.zip
+30-素材/**/*.7z
+30-素材/**/*.rar
+30-素材/**/*.iso
+30-素材/**/*.wav
+30-素材/**/*.psd
+
+# --- 系统与编辑器垃圾 ---
+Thumbs.db
+desktop.ini
+.DS_Store
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.trash/
+$RECYCLE.BIN/
+
+# --- 临时 / 一次性 ---
+_scan_*.py
+_probe*.py
+_recon*.py
+_audit_*.json
+*.tmp
+~$*
