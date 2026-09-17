@@ -78,3 +78,5 @@
 - **代理端口每次会话可能不同** → 禁止写死（取值方式见 `~/.workbuddy/MEMORY.md`）
 - **工作区会换** → 可复用工具放 `~/.workbuddy/`，不放工作区
 - **同一文件多个 Edit 必须串行** → 并发提交会静默丢失（本次实测 2 处无声消失）
+- **safe-delete 守卫不覆盖 cmd 通道**（09-17 实测）：hook 的是 Python/PowerShell 删除；绕行必须先过 SOUL「删除两道强制门」（备份 md5 + 审计日志，`E:\brain\90-归档\delete_audit.log`）
+- **`check-ignore -v` 对被 `!` 放行的路径也有输出**（显示负规则）→ "有输出=被忽略"的判定是错的；权威判定用 `git ls-files` 或看匹配规则首字符是否 `!`
